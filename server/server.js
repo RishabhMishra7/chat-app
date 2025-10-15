@@ -20,6 +20,8 @@ export const io = new Server(server, {
 //Store online users
 export const userSocketMap = {}; // {userId:socketId}
 
+// Added error handling for WebSocket messages
+
 //Socket.io connection handler
 io.on("connection", (socket) => {
   const userId = socket.handshake.query.userId;
